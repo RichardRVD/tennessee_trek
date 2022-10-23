@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennessee Trekker Home Page</title>
+    <!-- CSS only -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/home_style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light static-top mb-5 shadow" style="background-color: #1D2D44;">
+        <div class="container">
+            <a href="/home" style=" text-decoration-line: none; "><h1 class="navbar-brand" href="/home" style="color: #D7F9F1;">Tennessee Trekker</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/become_a_trekker" style="color: #D7F9F1;">Become a Trekker/Sign in</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/book" style="color: #D7F9F1;">Book a Trip</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/community" style="color: #D7F9F1;">Community</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/shop" style="color: #D7F9F1;">Merchandise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" style="color: #D7F9F1;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: #D7F9F1;">Contact Us</a>
+                    </li>
+                    {% for user in session %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #D7F9F1;" >Logout</a>
+                    </li>
+                    {% endfor %}
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div style=" color: rgb(223, 223, 223);">
+            <div class="card-body">
+                <video style="opacity: 90%;" id="background_video" autoplay loop>
+                    <source src="/static/waterfall_login.mp4" >
+                </video>
+                <h1 class="text-center">Welcome to Tennessee Trekker</h1>
+                <div class="row align-items-start">
+                    <div class="col">
+                        <p class="text-center" style="font-size: 18pt;">Here at Tennessee Trekker, we aim to provide you with the highest quality tours you've ever been on. Whether your interest is kayaking, hiking, camping, etc. We want to show you the natural beauty of this state and aim to offer you more than just a tour. We want you to have fun. We want you to become a member of the Trekker community. We want you to be a part of our family and keep coming back for more.</p><br>
+                        <p style="font-size: 18pt;"">Come book a trip with us today and let us show you the difference between Tennessee Trekker and all the rest. All members who book a trip with Tennessee Trekker will receive a 10% off coupon to our merchandise shop, that way you can remember your trip and show off your skills all at the same time! Sign up to join our family today!</p>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 60px; margin-left: 10%;">
+                    <div class="col">
+                        <a href="/book" type="button" class="btn btn-light" >
+                            <span>Book a Trip</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/community" type="button" class="btn btn-light">
+                            <span>Community</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/shop" type="button" class="btn btn-light">
+                            <span>Merchandise</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/about" type="button" class="btn btn-light">
+                            <span>About Us</span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/contact" type="button" class="btn btn-light">
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 150px;">
+        <div class="card border-0 shadow my-5" style="background-color: #1D2D44; color: #D7F9F1; margin-top: 50px;">
+            <h4 class="text-center" style="margin-top: 20px ;">A Big Thank You to All of Our Partners:</h4>
+            <div class="card-body p-3 d-flex justify-content-evenly text-align-center" style="height: 100px;">
+                <img src="/static/cookeville.png" class="rounded float-start" style="height: 25px; width: 90px; margin-top: 15px;" alt="City of Cookeville">
+                <img src="/static/hyperlite.png" class="rounded float-start" style="height: 50px;" alt="Hyperlite">
+                <img src="/static/perception.png" class="rounded float-start" style="height: 50px;" alt="Perception Kayaks">
+                <img src="/static/yeti.png" class="rounded float-start" style="height: 50px;" alt="Yeti">
+            </div>
+        </div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light static-bottom shadow" style="background-color: #1D2D44;">
+        <div class="container">
+            <a class="navbar-brand" href="/home" style="color: #D7F9F1;">Tennessee Trekker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: #D7F9F1;">Book a Trip</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: #D7F9F1;">Community</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="color: #D7F9F1;">Merchandise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #D7F9F1;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: #D7F9F1;">Contact Us</a>
+                    </li>
+                    {% for user in session %}
+                        
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #D7F9F1;" >Logout</a>
+                    </li>
+                        
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

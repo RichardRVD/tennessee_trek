@@ -1,0 +1,19 @@
+body {
+    background: url('/static/IMG_3101.jpeg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+h1{
+    font-family: 'Cormorant SC', serif;
+}
+a{
+        font-family: 'Cormorant SC', serif;
+}
+p{
+            font-family: 'Cormorant SC', serif;
+}
+h2{
+            font-family: 'Cormorant SC', serif;
+}

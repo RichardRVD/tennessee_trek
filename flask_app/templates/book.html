@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Trip</title>
+    <!-- CSS only -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600&family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/book_style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light static-top mb-5 shadow" style="background-color: #1D2D44;">
+        <div class="container">
+            <a href="/home" style=" text-decoration-line: none; "><h1 class="navbar-brand" href="/home" style="color: #D7F9F1;">Tennessee Trekker</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home" style="color: #D7F9F1;">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/community" style="color: #D7F9F1;">Community</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/shop" style="color: #D7F9F1;">Merchandise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about" style="color: #D7F9F1;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact" style="color: #D7F9F1;" >Contact Us</a>
+                    </li>
+                    {% for user in session %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" style="color: #D7F9F1;" >Logout</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">Schedule Your Outdoor Experience</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <ul>
+                            {% for trip in trips %}
+                            <li>{{ trip.date }}{{ trip.time }}{{ trip.name }}{{ trip.price }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col">
+                <form action="/select/trip" method="POST">
+                <div class="md-form md-outline input-with-post-icon datepicker">
+                    <input placeholder="Select date" type="date" name="date" id="example" class="form-control">
+                    <input type="submit" class="btn btn-info" value="Schedule your trip">
+                </div>
+                </form>
+                {% if session['user_id'] == 1 %}
+                <form action="/create/trip" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" name="name" placeholder="Enter Name Here...">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="textarea" class="form-control" name="description" placeholder="Enter Description Here...">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" step="0.02" name="price">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time of Trip:</label>
+                        <input type="time" class="form-control" name="time">
+                    </div>
+                    <div class="md-form md-outline input-with-post-icon datepicker">
+                        <label for="date">Select a Date:</label>
+                        <input name="date" type="date" id="create_trip" class="form-control">
+                        <input type="hidden" name="order_id" value="1">
+                        <input type="submit" class="btn btn-info" value="Add trip">
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Carousel -->
+    <div class="container" style="width: 50%; margin-top:50px; ">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="8"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="9"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="10"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="11"></button>
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner d-block justify-content-evenly">
+            <div class="carousel-item active">
+                <img src="/static/IMG_3101.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_3075.jpeg" alt="burgess" class="w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_3029.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_2950.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_2871.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_3312.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_0158.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_0406.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_0416.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_2075.jpeg" alt="burgess" class=" w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/IMG_1954.jpeg" alt="burgess" class=" w-100">
+            </div>
+        </div>
+        
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
