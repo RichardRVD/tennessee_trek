@@ -8,4 +8,5 @@ and utilized Bcrypt for security and password hashing. On the front end HTML, CS
 the landing pages. This will continue to be a fun project to keep working on as the days and months come. 
 
 
-<div style="position: relative; padding-bottom: NaN%; height: 0;"><iframe src="https://www.loom.com/embed/72aea875b979452681ba3c3ca91d4950" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+https://user-images.githubusercontent.com/106632497/197616428-33cbf0b9-15de-479b-8f93-0b0a10775a8a.mp4
+
