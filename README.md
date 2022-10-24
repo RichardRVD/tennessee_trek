@@ -7,5 +7,5 @@ to store users when they login to the project. I implemented validations for log
 and utilized Bcrypt for security and password hashing. On the front end HTML, CSS, and bootstrap were used to give an awesome display when a user hits 
 the landing pages. This will continue to be a fun project to keep working on as the days and months come. 
 
-[<img src="https://i9.ytimg.com/vi/_7FWtpLXzbc/mq3.jpg?sqp=CMTk25oG&rs=AOn4CLDWbsSNpXvcbWRiCu_L7YXAAa6ajw" width="50%">](https://www.youtube.com/watch?v=_7FWtpLXzbc)
+[<img src="https://i9.ytimg.com/vi_webp/_7FWtpLXzbc/mqdefault.webp?v=6356f39a&sqp=CPDm25oG&rs=AOn4CLDfBkx53j5VfWM6qUrfA2aUnkKQbw" width="50%">](https://www.youtube.com/watch?v=_7FWtpLXzbc)
 
