@@ -7,4 +7,4 @@ to store users when they login to the project. I implemented validations for log
 and utilized Bcrypt for security and password hashing. On the front end HTML, CSS, and bootstrap were used to give an awesome display when a user hits 
 the landing pages. This will continue to be a fun project to keep working on as the days and months come. 
 
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=_7FWtpLXzbc) "Now in Android: 55")
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=_7FWtpLXzbc))
