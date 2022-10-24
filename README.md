@@ -6,3 +6,4 @@ use for our own fun and leisure and maybe even bring some folks along with us on
 to store users when they login to the project. I implemented validations for login and registration with error messages displayed in appropriate lines 
 and utilized Bcrypt for security and password hashing. On the front end HTML, CSS, and bootstrap were used to give an awesome display when a user hits 
 the landing pages. This will continue to be a fun project to keep working on as the days and months come. 
+https://youtu.be/_7FWtpLXzbc
